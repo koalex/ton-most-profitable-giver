@@ -1,0 +1,24 @@
+{
+  "name": "ton-most-profitable-giver",
+  "version": "1.0.0",
+  "description": "Get most profitable giver and write to file.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ton",
+    "giver",
+    "toncoin"
+  ],
+  "author": {
+    "name": "Konstantin Aleksandrov",
+    "url": "https://github.com/koalex"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "qs": "^6.10.1"
+  }
+}
