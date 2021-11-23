@@ -1,20 +1,30 @@
 const fs = require('fs');
+const path = require('path');
 const axios = require('axios');
 const qs = require('qs');
 
+const FILE_PATH = process.env.GIVER_PATH || `${__dirname}/mostProfitableGiver.txt`;
 const DELAY = 1000 * 20; // 20 seconds
 
-start();
+if (require.main.filename === __filename) {
+	start();
+}
 
-async function start() {
+let timeoutId;
+
+async function start(delay) {
 	try {
 		const mostProfitableGiver = await getMostProfitableGiver();
-		fs.writeFileSync(`${__dirname}/mostProfitableGiver.txt`, mostProfitableGiver);
-		setTimeout(start, DELAY);
+		fs.writeFileSync(path.normalize(FILE_PATH), mostProfitableGiver);
+		timeoutId = setTimeout(start, delay || DELAY, delay);
 	} catch(err) {
 		console.error(err);
-		setTimeout(start, DELAY);
+		timeoutId = setTimeout(start, delay || DELAY, delay);
 	}
+}
+
+function stop() {
+	clearTimeout(timeoutId);
 }
 
 async function getMostProfitableGiver() {
@@ -50,3 +60,6 @@ async function getMostProfitableGiver() {
 
 	return mostProfitableGiver;
 }
+
+exports.start = start;
+exports.stop = stop;

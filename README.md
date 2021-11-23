@@ -2,7 +2,7 @@
 
 ---
 
-### Get most profitable giver for current time and write it to ```mostProfitableGiver.txt```
+### Get most profitable giver for current time and write it to ```process.env.GIVER_PATH``` or ```mostProfitableGiver.txt```
 
 Install dependencies:
 ```
