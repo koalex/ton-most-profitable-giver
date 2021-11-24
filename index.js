@@ -39,7 +39,7 @@ async function getMostProfitableGiver() {
     start,
     end,
     step: 60,
-  }
+  };
 
   const response = await axios({
     url,
