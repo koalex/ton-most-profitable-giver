@@ -12,11 +12,20 @@
     "giver",
     "toncoin"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/koalex/ton-most-profitable-giver.git"
+  },
+  "bugs": {
+    "url": "https://github.com/koalex/ton-most-profitable-giver/issues"
+  },
   "author": {
     "name": "Konstantin Aleksandrov",
+    "email": "alexandrovkm@gmail.com",
     "url": "https://github.com/koalex"
   },
   "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://github.com/koalex/ton-most-profitable-giver#readme",
   "dependencies": {
     "axios": "^0.24.0",
     "qs": "^6.10.1"
