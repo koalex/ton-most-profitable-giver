@@ -55,7 +55,7 @@ async function getMostProfitableGiver() {
 		const { giver } = metric;
 		const currentHs = BigInt(values.pop()[1]);
 
-		if (currentHs < mostProfitableGiverHs) {
+		if (currentHs > mostProfitableGiverHs) {
 			mostProfitableGiver = giver;
 			mostProfitableGiverHs = currentHs;
 		}
