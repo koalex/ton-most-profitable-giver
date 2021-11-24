@@ -49,7 +49,7 @@ async function getMostProfitableGiver() {
   });
 
   let mostProfitableGiver = null;
-  let mostProfitableGiverHs = Infinity;
+  let mostProfitableGiverHs = 0;
 
   for (const { metric, values } of response.data.data.result) {
     const { giver } = metric;
